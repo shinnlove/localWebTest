@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/treegrid/jquery.treegrid.css">
+    <style>
+        /*.treegrid-indent{ width:0 !important; }*/
+        .indent-em{text-indent: 1em !important;}
+    </style>
+    <title>TreeGrid</title>
+</head>
+
+<body>
+
+    <table class="tree">
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>可用编号</th>
+                <th>机构id</th>
+                <th>渠道码</th>
+                <th>规则名称</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="treegrid-channel" data-child-class="treegrid-parent-channel">
+                <td><input class="rule-parent" type="checkbox" name="rule-check" /></td>
+                <td>1-12345</td>
+                <td>1-instabcd</td>
+                <td>1-code123</td>
+                <td>1-enen</td>
+            </tr>
+            <tr class="treegrid-rule-1 treegrid-parent-channel" data-parent-class="treegrid-channel">
+                <td><input class="rule-child" type="checkbox" name="rule-check" /></td>
+                <td class="indent-em">2-12345</td>
+                <td class="indent-em">2-instabcd</td>
+                <td class="indent-em">2-code123</td>
+                <td class="indent-em">2-enen</td>
+            </tr>
+            <tr class="treegrid-rule-2 treegrid-parent-channel" data-parent-class="treegrid-channel">
+                <td><input class="rule-child" type="checkbox" name="rule-check" /></td>
+                <td class="indent-em">3-12345</td>
+                <td class="indent-em">3-instabcd</td>
+                <td class="indent-em">3-code123</td>
+                <td class="indent-em">3-enen</td>
+            </tr>
+            <tr class="treegrid-rule-3 treegrid-parent-channel" data-parent-class="treegrid-channel">
+                <td><input class="rule-child" type="checkbox" name="rule-check" /></td>
+                <td class="indent-em">3-12345</td>
+                <td class="indent-em">3-instabcd</td>
+                <td class="indent-em">3-code123</td>
+                <td class="indent-em">3-enen</td>
+            </tr>
+            <tr class="treegrid-rule-4 treegrid-parent-channel" data-parent-class="treegrid-channel">
+                <td><input class="rule-child" type="checkbox" name="rule-check" /></td>
+                <td class="indent-em">4-12345</td>
+                <td class="indent-em">4-instabcd</td>
+                <td class="indent-em">4-code123</td>
+                <td class="indent-em">4-enen</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/treegrid/jquery.treegrid.js?v=1"></script>
+    <script type="text/javascript">
+        $(function () {
+            // init tree
+            $('.tree').treegrid();
+
+            // live on DOM events
+            $("body").on("click", ".rule-parent", function () {
+                // 全选引起子级勾选
+                var _t = $(this), childClassName = _t.parent().parent().data("child-class");
+                var children = $(".tree").find("." + childClassName).find("input[name=rule-check]");
+                if (_t.prop("checked")) {
+                    children.prop("checked", true);
+                } else {
+                    children.prop("checked", false);
+                }
+            }).on("click", ".rule-child", function () {
+                // 单选变化引起全选或取消全选
+                var _t = $(this), parentClassName = _t.parent().parent().data("parent-class"),
+                    parentTR = $(".tree").find("." + parentClassName),
+                    parentCbx = parentTR.find("input[name=rule-check]"), // 父级选择框
+                    childClassName = parentTR.data("child-class"),
+                    childrenCbx = $(".tree").find("." + childClassName).find("input[name=rule-check]"); // 子选择框
+
+                if (childrenCbx.not("input:checked").length == 0) {
+                    parentCbx.prop("checked", true); 	// 如果所有子级都勾中了，全选
+                } else {
+                    parentCbx.prop("checked", false); 	// 还有子级没勾中，就不全选
+                }
+            });
+        });
+    </script>
+</body>
+</html>

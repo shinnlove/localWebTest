@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+    <title>多选标签Select2</title>
+    <style>
+        .js-example-responsive { width:240px; }
+    </style>
+</head>
+
+<body>
+
+    <select class="js-example-responsive" multiple="multiple">
+        <optgroup label="金融交换主单据">
+            <option value="">全部</option>
+        </optgroup>
+        <optgroup label="金融交换主单据">
+            <option value="">主-已受理</option>
+            <option value="">主-已同步-未预发</option>
+            <option value="">主-已同步-已预发</option>
+            <option value="">主-处理中</option>
+            <option value="">主-已勾兑</option>
+        </optgroup>
+        <optgroup label="金融交换子单据">
+            <option value="">子-已受理</option>
+            <option value="">子-已同步-未预发</option>
+            <option value="">子-已同步-已预发</option>
+            <option value="">子-处理中</option>
+            <option value="">子-已勾兑</option>
+            <option value="">子-重发</option>
+            <option value="">子-未知</option>
+            <option value="">子-回执需人工</option>
+            <option value="">子-挂起</option>
+        </optgroup>
+        <optgroup label="批次查询">
+            <option value="">批-未完成</option>
+            <option value="">批-挂起</option>
+        </optgroup>
+    </select>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/select2/select2.full.min.js?v=2"></script>
+    <script>
+        $(function () {
+            // 初始化多选框
+            $(".js-example-responsive").select2({
+                maximumSelectionLength: 5
+            });
+        });
+    </script>
+</body>
+</html>

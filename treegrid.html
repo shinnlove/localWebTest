@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/treegrid/jquery.treegrid.css">
+    <title>TreeGrid</title>
+</head>
+
+<body>
+
+    <!-- 让一个tr标签成为treegrid只要加上class:treegrid-数字|字母样式；让一个tr成为父节点只要在它的子节点加上class：treegrid-parent-数字|字母样式 -->
+    <table class="tree">
+        <tr class="treegrid-compose">
+            <td>Root node</td>
+            <td>Additional info</td>
+        </tr>
+        <tr class="treegrid-compose-sub-1 treegrid-parent-compose">
+            <td>Node 1-1</td>
+            <td>Additional info</td>
+        </tr>
+        <tr class="treegrid-compose-sub-2 treegrid-parent-compose">
+            <td>Node 1-2</td><td>Additional info</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/treegrid/jquery.treegrid.js?v=1"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.tree').treegrid();
+        });
+    </script>
+</body>
+</html>

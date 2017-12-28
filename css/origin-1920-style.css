@@ -1,0 +1,75 @@
+/* 响应式布局 */
+html, body { width:100%; height:100%; }
+@media screen and (min-width:1441px) and (max-width:1920px){
+    .wrapper { height:1080px;}
+}
+/* 公共 */
+.ib { display: inline-block; }
+.ft12 { font-size:12px; }
+.ft14 { font-size:14px; }
+.ft16 { font-size:16px; }
+.ft24 { font-size: 24px; }
+.lh22 { line-height:22px; }
+.lh24 { line-height:24px; }
+.fl { float:left; }
+.fr { float: right; }
+.mr16 { margin-right:16px; }
+.ml24 { margin-left:24px; }
+.mr24 { margin-right:24px; }
+.round { border-radius:5px; }
+.info-white { background:#fff; }
+
+/* 大促投屏第一页 */
+/* 头部与1440屏完全一样 */
+.header { position: relative; height:64px; background:#fafafa; }
+.header-logo { position: absolute; top:20px; left:33px; width:28px; height:28px; background:url("../images/tower-logo@2x.png"); background-size: cover; }
+.header-title { position: absolute; top:27px; left:73px; color:#478def; letter-spacing:0; font: 20px/19px PingFangSC-Regular; }
+
+/* 预览条 */
+.view-bar { position:relative; margin:16px auto; width:96.666666%; height:64px; }
+.view-span { color:rgba(0,0,0,0.85); font-family:PingFangSC-Medium; line-height:22px; }
+.view-left { position:absolute; top:21px; left:479px; font-size:14em; }
+.view-middle { position:absolute; top:19px; left:800px; font-size:16em; line-height: 24px; }
+.view-right { position:absolute; top:21px; right:478px; font-size:14em; }
+
+/* 全局图表区 */
+.global-chart-sec { margin:16px auto; width:96.666666%; height:500px; }
+.chart-common { float:left; margin:24px 0px; width:50%; height:452px; }
+.pie-chart { box-sizing:border-box; }
+.sp-chart { border-right:1px dashed #e9e9e9; }
+
+/* 图表提示区，特别注意：往下沉了24px做中间分隔的虚线，总对齐顶部25px，则高度对齐顶端只要25-24=1px即可 */
+.chart-tip { position:relative; margin:1px 0px 17px; height:28px; }
+.tip-common { color:rgba(0,0,0,0.85); font-family:PingFangSC-Medium; }
+.tip-left, .tip-right { font-size:16em; line-height: 24px; }
+.tip-left { margin-left:122px; }
+.tip-right { margin-right:122px; }
+.tip-middle { position:absolute; top:0px; left:361px; font-size:20em; line-height:28px; }
+.tip-hr { margin: 0px auto; width:865px; border-top:1px dashed #e9e9e9; }
+.ps-tip { margin:23px 0px 6px; height:20px; }
+.ps-tip span { width:49.490538%; font-size:16em; text-indent:2em; }
+.chart-left-diagram, .chart-right-diagram { float: left; margin-left:10px; width:450px; height:340px; }
+.line-chart-diagram { margin:0px auto; width: 908px; height:340px; }
+
+/* 底部小卡片 */
+.histogram-sec { margin: 16px auto; width:96.666666%; height:388px; }
+.histogram-common { float:left; width: 32.558139%; height:388px; }
+.user-success, .card-cost { margin-right:1.16279069%; }
+/* 卡片内细节 */
+.card-title { margin:24px 0px 8px; height:24px; color:rgba(0,0,0,0.85); text-indent:2em; font-size:16em; font-family: PingFangSC-Medium;line-height:24px; }
+.card-sub-title { margin:8px 0px; height:22px; color:rgba(0,0,0,0.85); text-indent:222px; font-size:14em; font-family: PingFangSC-Medium;line-height:22px; }
+.diagram-des { margin:8px 0px; height:22px; color:rgba(0,0,0,0.85); font-size:14em; font-family: PingFangSC-Medium;line-height:22px; }
+.seconds-rec { display:inline-block; margin-left:80px; }
+.pre-minus { display:inline-block; margin-right:80px; }
+.card-num { color:#f56a00; }
+.big-card-num { color:#f04134; }
+/* 图表 */
+.user-success-cost-diagram, .card-cost-diagram, .exception-manage-diagram { margin:8px auto; width:580px; height:260px; }
+
+/* 图表模拟区 */
+.user-success-cost-diagram { background:url("../images/user-success2.png"); background-size:cover; }
+.card-cost-diagram { background:url("../images/card-cost2.png"); background-size:cover; }
+.exception-manage-diagram { background:url("../images/exception2.png"); background-size:cover; }
+.chart-left-diagram { background: url("../images/chart-left2.png"); background-size: cover; }
+.chart-right-diagram { background: url("../images/chart-right2.png"); background-size: cover; }
+.line-chart-diagram { background: url("../images/zhexian2.png"); background-size: cover; }

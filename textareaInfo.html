@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试textarea</title>
+</head>
+
+<body>
+
+    <div class="">
+        <textarea class="test" placeholder="请输入内容"></textarea>
+        <input type="button" name="test-btn" value="测试">
+        <input type="button" name="recover-btn" value="恢复">
+        <p>这里是具体内容：<span class="info"></span></p>
+    </div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("body").on("click", "input[name='test-btn']", function () {
+            var info = $(".test").val();
+            // 这里直接对textarea中的val使用escape
+            console.log(escape(info));
+        }).on("click", "input[name='recover-btn']", function () {
+            var encodeInfo = 'sa%20%26%20dfasdf%26%0A21%20-%20234123+%0A%0A%0Aasf3%204535-%0A';
+            // 对于前端encode的代码，先unescape，再while处理\n，最后可以将html内容写入DOM中
+            var correctInfo = unescape(encodeInfo);
+
+            var temp = correctInfo;
+            while(temp.indexOf("\n") != -1) {
+                temp = temp.replace("\n", "<br/>");
+            }
+            $(".test").val(correctInfo);
+            $(".info").html(temp);
+        });
+    });
+</script>
+</body>
+</html>

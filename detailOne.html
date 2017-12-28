@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <title>大促投屏第一页</title>
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css"/>
+    <style type="text/css">
+        /* 公共 */
+        .ib { display: inline-block; }
+        .ft12 { font-size:12px; }
+        .ft14 { font-size:14px; }
+        .ft16 { font-size:16px; }
+        .ft24 { font-size: 24px; }
+        .lh22 { line-height:22px; }
+        .lh24 { line-height:24px; }
+        .fl { float:left; }
+        .fr { float: right; }
+        .mr16 { margin-right:16px; }
+        .ml24 { margin-left:24px; }
+        .mr24 { margin-right:24px; }
+        .round { border-radius:5px; }
+        .info-white { background:#fff; }
+
+        /* 大促投屏第一页 */
+        .wrapper { width:100%; height:100%; min-width:1440px; min-height:750px; background: #eceef3; }
+        .header { position: relative; height:64px; background:#fafafa; }
+        .header-logo { position: absolute; top:20px; left:33px; width:28px; height:28px; background:url("images/tower-logo@2x.png"); background-size: cover; }
+        .header-title { position: absolute; top:27px; left:73px; color:#478def; letter-spacing:0; font: 20px/19px PingFangSC-Regular; }
+
+        /* 预览条 */
+        .view-bar { position:relative; margin:16px auto; width:1376px; height:54px; }
+        .view-span { color:rgba(0,0,0,0.85); font-family:PingFangSC-Medium; line-height:22px; }
+        .view-left { position:absolute; top:16px; left:254px; }
+        .view-middle { position:absolute; top:16px; left:560px; }
+        .view-right { position:absolute; top:16px; right:254px; }
+
+        /* 全局图表区 */
+        .global-chart-sec { margin:16px auto; width:1376px; height:280px; }
+        .chart-common { float:left; margin:24px 0px; width:688px; height:232px; }
+        .pie-chart { box-sizing:border-box; }
+        .sp-chart { border-right:1px dashed #e9e9e9; }
+
+        /* 图表提示区，特别注意：往下沉了24px做中间分隔的虚线，总对齐顶部25px，则高度对齐顶端只要25-24=1px即可 */
+        .chart-tip { position:relative; margin:1px 0px 17px; height:24px; }
+        .tip-common { color:rgba(0,0,0,0.85); font-family:PingFangSC-Medium; }
+        .tip-middle { position:absolute; top:0px; left:257px; }
+        .tip-hr { margin: 0px auto; width:640px; border-top:1px dashed #e9e9e9; }
+        .ps-tip { margin:7px 0px 6px; height:20px; }
+        .ps-tip span { width:340px; text-indent:2em; }
+        .chart-left-diagram, .chart-right-diagram { float: left; margin-left:10px; width:300px; height:170px; }
+        .line-chart-diagram { margin:0px auto; width: 660px; height:165px; }
+
+        /* 底部小卡片 */
+        .histogram-sec { margin: 16px auto; width:1376px; height:280px; }
+        .histogram-common { float:left; width: 448px; height:280px; }
+        /* 卡片内细节 */
+        .card-title { margin:16px 0px 4px; height:22px; color:rgba(0,0,0,0.85); text-indent:2em; font:14px/22px PingFangSC-Medium; }
+        .card-sub-title { margin:4px 0px; height:20px; color:rgba(0,0,0,0.85); text-indent:153px; font:12px/20px PingFangSC-Medium; }
+        .diagram-des { margin:4px 0px; height:20px; color:rgba(0,0,0,0.85); font:12px/20px PingFangSC-Regular; }
+        .card-num { color:#f56a00; }
+        .big-card-num { color:#f04134; }
+        /* 图表 */
+        .user-success-cost-diagram, .card-cost-diagram, .exception-manage-diagram { margin:4px auto; width:420px; height:170px; }
+
+        /* 图表模拟区 */
+        .user-success-cost-diagram { background:url("images/user-success-diagram@2x.png"); background-size:cover; }
+        .card-cost-diagram { background:url("images/card-cost-diagram@2x.png"); background-size:cover; }
+        .exception-manage-diagram { background:url("images/exception-diagram@2x.png"); background-size:cover; }
+        .chart-left-diagram { background: url("images/chart-left-diagram@2x.png"); background-size: cover; }
+        .chart-right-diagram { background: url("images/chart-right-diagram@2x.png"); background-size: cover; }
+        .line-chart-diagram { background: url("images/line-chart-diagram@2x.png"); background-size: cover; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            <a href="#" class="header-logo ib"></a>
+            <span class="header-title ib">金融指挥塔</span>
+        </div>
+        <div class="content">
+            <div class="view-bar info-white round">
+                <span class="view-span view-left ft14 ib">网联峰值：<em class="card-num">20000tps</em></span>
+                <span class="view-span view-middle ft16 ib">银行卡交易峰值：<em class="big-card-num ft24">80000</em><em class="big-card-num ft14">tps</em></span>
+                <span class="view-span view-right ft14 ib">瞬时当前峰值：<em class="card-num">20000tps</em></span>
+            </div>
+            <!-- 全局图表区 -->
+            <div class="global-chart-sec info-white round clearfix">
+                <div class="chart-common pie-chart sp-chart">
+                    <div class="chart-tip clearfix">
+                        <span class="tip-common ft14 lh22 fl ml24 tip-left">用户总成功：<em class="card-num">10.23</em>亿</span>
+                        <span class="tip-common ft16 lh24 tip-middle">用户总请求量：<em class="card-num">10.23</em>亿</span>
+                    </div>
+                    <div class="tip-hr clearfix"></div>
+                    <div class="ps-tip">
+                        <span class="ib fl">支付工具占比</span>
+                        <span class="ib fl">交易来源占比</span>
+                    </div>
+                    <div class="chart-left-diagram"></div>
+                    <div class="chart-right-diagram"></div>
+                </div>
+                <div class="chart-common line-chart">
+                    <div class="chart-tip clearfix">
+                        <span class="tip-common ft14 lh22 fl ml24 tip-left">机构总成功：<em class="card-num">4000</em>次</span>
+                        <span class="tip-common ft16 lh24 tip-middle">机构总请求量：<em class="card-num">4000</em>笔</span>
+                        <span class="tip-common ft14 lh22 fr mr24 tip-right">成功总金额：<em class="card-num">1.23</em>亿</span>
+                    </div>
+                    <div class="tip-hr clearfix"></div>
+                    <div class="ps-tip">
+                        <span class="ib fl">银行卡支付成功率</span>
+                        <em class="ib fl ft12">银行成功率</em>
+                        <em class="ib fl ft12">系统成功率</em>
+                    </div>
+                    <div class="line-chart-diagram"></div>
+                </div>
+            </div>
+            <div class="histogram-sec clearfix">
+                <!-- 左卡片 user-success -->
+                <div class="histogram-common mr16 info-white round user-success">
+                    <div class="card-title">用户成功率</div>
+                    <div class="card-sub-title">银行卡用户成功率：<span class="card-num">89%</span></div>
+                    <div class="diagram-des clearfix">
+                        <span class="seconds-rec ib fl ml24">秒级掉单恢复：<em class="card-num">20000</em>次</span>
+                        <span class="pre-minus ib fr mr24">预计可减少客诉：<em class="card-num">8000</em>通</span>
+                    </div>
+                    <div class="user-success-cost-diagram"></div>
+                </div>
+
+                <!-- 中间卡片 card-cost -->
+                <div class="histogram-common mr16 info-white round card-cost">
+                    <div class="card-title">银行卡交易耗时</div>
+                    <div class="card-sub-title">银行卡平均交易耗时：<span class="card-num">859ms</span></div>
+                    <div class="diagram-des clearfix">
+                        <span class="seconds-rec ib fl ml24">秒级掉单恢复：<em class="card-num">20000</em>次</span>
+                        <span class="pre-minus ib fr mr24">预计可减少客诉：<em class="card-num">8000</em>通</span>
+                    </div>
+                    <div class="card-cost-diagram"></div>
+                </div>
+
+                <!-- 右卡片 exception-manage -->
+                <div class="histogram-common info-white round exception-manage">
+                    <div class="card-title">异常管控</div>
+                    <div class="card-sub-title">异常管控自动化率：<span class="card-num">89%</span></div>
+                    <div class="diagram-des clearfix">
+                        <span class="seconds-rec ib fl ml24">累计出现抖动：<em class="card-num">200</em>次</span>
+                        <span class="pre-minus ib fr mr24">总决策次数：<em class="card-num">600</em>次</span>
+                    </div>
+                    <div class="exception-manage-diagram"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

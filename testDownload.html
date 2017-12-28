@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <input type="button" value="下载" onclick="abc()"/>
+
+    <script type="text/javascript">
+        function abc() {
+            var url = "/finout/queryDownload.json";
+            xhr = new XMLHttpRequest(),
+                form = new FormData();
+
+            form.append("filename", "123.txt");
+
+            xhr.open("POST", url);
+
+            xhr.send(form);
+        }
+    </script>
+</body>
+</html>

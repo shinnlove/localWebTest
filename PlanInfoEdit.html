@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预案编辑页面</title>
+    <style type="text/css">
+        /* 基础信息页面的样式 */
+        *, html, body, ul, li, dd, dl, dt, a, p { margin: 0; paading:0 }
+        .strong { font-weight: bold; }
+        .clearfix { clear:both; zoom:1 }
+        .info-wrapper { width:660px; margin:20px; border:1px solid #ddd; border-radius: 6px;  -webkit-border-radius: 6px; -moz-border-radius: 6px; font-size:12px; -webkit-box-shadow:0 0 10px #ccc; -moz-box-shadow:0 0 10px #ccc; box-shadow:0 0 10px #ccc; }
+        .info-header { width: 620px; margin: 5px auto 20px; }
+        .info-title { display:block; width: 300px; height:50px; padding-top:20px; }
+        .info-label { font-size:1.8em; margin-right:20px; }
+        .header-hr { width:220px; margin: 10px 0px 5px; }
+        .info-tip { line-height:26px; display:inline-block; position:relative; }
+        .info-tip p { display:inline-block; margin-right:10px; }
+        .info-tip p span { display:inline-block;  }
+        .info-content, .info-footer { margin: 10px; padding: 10px; }
+        .info-detail { margin-bottom: 30px; }
+        .info-detail ul { margin: 0px; padding: 0px; }
+        .info-detail ul li { padding: 0px; list-style-type:none; margin-bottom: 15px; }
+        .info-enclosure { margin-left:10px; }
+        .info-footer { padding-bottom:20px; }
+        .footer-btn { float:right; margin-right:30px; }
+        /* 预案页面 */
+        .plan-header { width:620px; margin: 0px 0px 10px 20px; }
+        .plan-name {  text-indent:2em; font-size:16px; }
+        .plan-title { display:block; width: 300px; padding-top:20px; }
+        .plan-hr { width:320px; margin: 10px 0px 5px; }
+        .plan-brief { height:100px; }
+        .brief-left { float:left; margin-top:17px; }
+        .brief-left p { margin-bottom:9px; }
+        .brief-left p .strong { display:inline-block; width:70px; }
+        .brief-right { width:280px; height:70px; margin: 15px 0px 0px 220px; background: #fafafa; padding:5px; line-height: 22px; text-indent: 2em; border-radius:6px; float:left; -webkit-box-shadow:5px 3px 10px #ccc; -moz-box-shadow:5px 3px 10px #ccc; box-shadow:5px 3px 10px #ccc;  }
+    </style>
+</head>
+<body>
+
+<div class="info-wrapper">
+    <header class="info-header">
+        <p class="plan-title">
+            <span class="info-label">预案信息详情</span>
+            <span class="strong">编号：</span>
+            <span>66</span>
+        </p>
+        <p class="plan-name">——国内支付渠道成功率异常预案</p>
+
+        <hr class="plan-hr">
+
+        <div class="info-tip">
+            <p><span class="strong">创建时间：</span><span>2017-04-16 17:10:25</span></p>
+            <p><span class="strong">作者：</span><span>修平</span></p>
+            <p><span class="strong">修改时间：</span><span>2017-04-20 12:10:25</span></p>
+            <p><span class="strong">修改人：</span><span>金升</span></p>
+        </div>
+
+        <div class="plan-brief">
+            <div class="brief-left">
+                <p><span class="strong">业务类型：</span><span>退款</span></p>
+                <p><span class="strong">对象类型：</span><span>机构</span></p>
+                <p><span class="strong">主节点：</span><span>批处理</span></p>
+            </div>
+            <div class="brief-right">
+                Desc: 这是预案的描述这是预案的描述这是预案的描述这是预案的描述这是预案的描述这是预案的描述这是预案的描述这是预案的描述
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <section class="info-content clearfix">
+        <form>
+            <div class="info-detail">
+                <ul>
+                    <li>
+                        <div class="info-layer">
+                            <span>信息名称：</span>
+                            <span>
+                                    <input type="text" name="info-name" value="" placeholder="请输入信息名称" />
+                                </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info-layer">
+                            <span>信息类型：</span>
+                            <span>
+                                    <select>
+                                        <option>一种类型</option>
+                                        <option>两种类型</option>
+                                        <option>三种类型</option>
+                                    </select>
+                                </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info-layer">
+                            <span>信息内容：</span>
+                            <span>
+                                    <textarea name="info-content" value="" placeholder="请输入信息内容" ></textarea>
+                                </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-enclosure">
+                这里是附件列表
+            </div>
+        </form>
+    </section>
+    <footer class="info-footer clearfix">
+        <div class="footer-btn">
+            <input type="button" value="取消" />
+            <input type="button" value="保存" />
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

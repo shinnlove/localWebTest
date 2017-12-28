@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/pnotify/pnotify.css">
+    <title>气泡提示</title>
+</head>
+
+<body>
+
+    <button class="btn btn-default" onclick="notify('Default','Right Top Notify');" type="button">Default</button>
+    <button class="btn btn-default" onclick="notify_s('审核成功','Finmng虚拟表审核通过');" type="button">Success</button>
+    <button class="btn btn-default" onclick="notify_i('温馨提示','流程待审核');" type="button">Info</button>
+    <button class="btn btn-default" onclick="notify_e('审核失败','审核信息错误：最初因为数据唯一性校验不通过，接着引发了数据库操作失败，然后导致了....，最终引起审核失败。');" type="button">Error</button>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/pnotify/pnotify.js"></script>
+    <script>
+        $(function () {
+            // Pnotify notifier
+            $.pnotify.defaults.history = false;
+            $.pnotify.defaults.delay = 3000;
+
+        });
+
+        function notify(title, text){
+            $.pnotify({title: title, text: text, opacity: .8, addclass: 'palert'});
+        }
+        function notify_s(title,text){
+            $.pnotify({title: title, text: text, opacity: .8, type: 'success'});
+        }
+        function notify_i(title,text){
+            $.pnotify({title: title, text: text, opacity: .8, type: 'info'});
+        }
+        function notify_e(title,text){
+            $.pnotify({title: title, text: text, opacity: .8, type: 'error'});
+        }
+    </script>
+</body>
+</html>

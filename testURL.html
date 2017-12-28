@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/utils/utils-common.js"></script>
+    <script type="text/javascript" src="js/abc.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var eventId = urlHandle.getQuery("eventId"); // 解析字段值
+            if (eventId) {
+                console.log(eventId);
+            } else {
+                console.log("没找到字段对应的值");
+            }
+
+            var urlParams = urlHandle.getQuery(); // 解析url对象
+            if (urlParams) {
+                console.log("url参数" + JSON.stringify(urlParams));
+            } else {
+                console.log("没有url参数");
+            }
+
+        });
+    </script>
+</body>
+</html>

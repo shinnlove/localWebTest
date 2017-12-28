@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟测试页面</title>
+</head>
+
+<body>
+    <div class="first-intro">
+        <p>hello，我是<span>胡睿</span></p>
+        <input type="button" id="first-btn" name="btn" value="点我"/>
+        <input type="button" id="refresh-btn" name="btn" value="刷新"/>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        // 1.页面ready做什么
+        $(function () {
+            alert("你好");
+
+
+            // 2.点按钮会发生什么
+            $("#first-btn").click(function () {
+                alert("点我干嘛");
+
+                // 3.变更DOM
+                $(".first-intro p span").html("小万");
+
+            });
+
+            // 刷新，和2一个道理
+            $("#refresh-btn").click(function () {
+                window.location.reload();
+            });
+
+        });
+    </script>
+</body>
+</html>

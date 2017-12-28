@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期间隔判断</title>
+</head>
+
+<body>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+
+        var timeStart = "2017-06-21 00:00:00";
+        var timeEnd = "2017-06-22 00:00:00";
+        
+        $(function () {
+            var info = getDateDiff(timeStart, timeEnd, true);
+            if (info > 1) {
+                alert("超过1天");
+            }
+        });
+
+        function getDateDiff(dateBegin, dateEnd, diffDay) {
+            var diffDay = diffDay || false;
+
+            var spaceSeg = " ", dateSeg = "-", timeSeg = ":", beginArray, dateBeginDate, dateBeginTime, endArray, dateEndDate, DateEndTime;
+
+            beginArray = dateBegin.split(spaceSeg);
+            dateBeginDate = beginArray[0]; // 年月日
+            dateBeginTime = beginArray[1]; // 时分秒
+
+            var beginDateList = dateBeginDate.split(dateSeg);
+            var beginTimeList = dateBeginTime.split(timeSeg);
+
+            var beginDate = new Date(beginDateList[0], beginDateList[1]-1, beginDateList[2], beginTimeList[0], beginTimeList[1], beginTimeList[2]);
+
+            endArray = dateEnd.split(spaceSeg);
+            dateEndDate = endArray[0]; // 年月日
+            DateEndTime = endArray[1]; // 时分秒
+
+            var endDateList = dateEndDate.split(dateSeg);
+            var endTimeList = DateEndTime.split(timeSeg);
+
+            var endDate = new Date(endDateList[0], endDateList[1]-1, endDateList[2], endTimeList[0], endTimeList[1], endTimeList[2]);
+
+            // 计算时间差
+            var spanMillSeconds = endDate.getTime() - beginDate.getTime();
+
+            // 如果要返回天（浮点数）
+            if (diffDay) {
+                return spanMillSeconds / (24 * 3600 * 1000);
+            }
+
+            return spanMillSeconds / 1000;
+        }
+
+    </script>
+</body>
+</html>

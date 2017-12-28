@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑预案结点</title>
+    <style type="text/css">
+        /* 头部 */
+        .span-label { font-weight: bold; }
+        .plan-info { width:700px }
+        .plan-title { line-height:26px; }
+        /* 结点 */
+        .plan-node { border:1px solid #ddd; border-radius:5px; margin-bottom:10px; -webkit-box-shadow:0 0 10px #ccc; -moz-box-shadow:0 0 10px #ccc; box-shadow:0 0 10px #ccc; }
+        .node-des { text-indent:2em; line-height:28px; position:relative; margin-bottom: 10px; }
+        .edit-des { position: absolute; right: 10px; bottom: 0px; }
+        .node-list { padding-top: 10px; }
+        .node-list ul li { margin-bottom:10px; }
+        .node-list ul li :after { context:"XXX"; clear:both; }
+        .step-hr { display: inline-block; width: 150px; color:#ccc; }
+        /* 原子信息部分 */
+        .atom-info {  }
+        .atom-detach {  }
+
+        /* 公共 */
+        ul, li { margin :0; list-style-type: none; display:block; }
+        .w700 { width:700px }
+        .mr20 { margin-right:20px; }
+        .mb10 { margin-bottom:10px; }
+        .p10 { padding:10px }
+        .ib { display:inline-block }
+        .fl { float:left }
+        .fr { float:right }
+        .cl { clear:both }
+    </style>
+</head>
+
+<body>
+    <header class="plan-info w700 p10">
+        <div class="plan-title">
+            <span class="span-label">预案名称：</span>
+            <span>防止退款渠道不验证的预案</span>
+        </div>
+        <div class="plan-title">
+            <span class="span-label">预案描述：</span>
+            <span>我们目前有一些渠道居然退款不经过验证，这个预案可以防止这个问题。我们目前有一些渠道居然退款不经过验证，这个预案可以防止这个问题。</span>
+        </div>
+    </header>
+
+    <section>
+        <div class="plan-node w700 p10">
+            <span>关联预警</span>
+            <div>
+                <hr class="step-hr">
+            </div>
+            <div class="node-list mb10">
+                <ul>
+                    <li>
+                        <span class="atom-info ib fl">2、原子操作22</span>
+                        <span class="atom-detach ib fr mr20">-</span>
+                        <div class="cl"></div>
+                    </li>
+                    <li>
+                        <span class="atom-info ib fl">3、原子操作23</span>
+                        <span class="atom-detach ib fr mr20">-</span>
+                        <div class="cl"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="node-add fr mr20"> + </div>
+            <div class="cl"></div>
+        </div>
+    </section>
+
+    <section class="plan-node w700 p10">
+        <div class="node-title mb10">
+            <span>A</span>
+            <span>报警信息</span>
+        </div>
+        <div class="node-des">
+            报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。报警信息的结点是用来XXXX。
+            <span class="edit-des">编辑</span>
+        </div>
+
+        <hr class="step-hr">
+
+        <div class="node-list mb10">
+            <ul>
+                <li>
+                    <span class="atom-info ib fl">2、原子操作22</span>
+                    <span class="atom-detach ib fr mr20">-</span>
+                    <div class="cl"></div>
+                </li>
+                <li>
+                    <span class="atom-info ib fl">3、原子操作23</span>
+                    <span class="atom-detach ib fr mr20">-</span>
+                    <div class="cl"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="node-add fr mr20"> + </div>
+        <div class="cl"></div>
+    </section>
+
+    <section class="plan-node w700 p10">
+        <div class="node-title mb10">
+            <span>B</span>
+            <span>初步定位</span>
+        </div>
+        <div class="node-des">
+            初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。初步定位的结点是用来XXXX。
+            <span class="edit-des">编辑</span>
+        </div>
+
+        <hr class="step-hr">
+
+        <div class="node-list mb10">
+            <ul>
+                <li>
+                    <span class="atom-info ib fl">2、原子操作22</span>
+                    <span class="atom-detach ib fr mr20">-</span>
+                    <div class="cl"></div>
+                </li>
+                <li>
+                    <span class="atom-info ib fl">3、原子操作23</span>
+                    <span class="atom-detach ib fr mr20">-</span>
+                    <div class="cl"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="node-add fr mr20"> + </div>
+        <div class="cl"></div>
+    </section>
+
+</body>
+</html>

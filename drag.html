@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <title></title>
+    <style>
+        body{font-family:'Helvetica Neue','Helvetica Neue',Helvetica,Arial,'Hiragino Sans GB','Microsoft Yahei',sans-serif;color:#4C4747}
+        body,div,p{padding:0;margin:0}
+        .pull_drawing{position:absolute;top:-76px;width:100%;padding-top:22px;/*背景图：携程在手，说走就走*/background:url(http://pic.c-ctrip.com/h5/tuan/load_text.png) no-repeat center 0;background-size:172px 22px;height:35px;line-height:35px;text-align:center}
+        .loading_icon{position:absolute;margin-left:-25px;margin-top:8px;width:14px;height:14px;border:2px solid #54a5d4;border-radius:50%;-webkit-animation:roll 1s linear infinite;animation:roll 1s linear infinite;clip:rect(0,15px,18px,0);line-height:35px;text-align:center}
+        @-webkit-keyframes roll{0%{-webkit-transform:rotate(0)}
+            100%{-webkit-transform:rotate(360deg)}
+        }
+        @keyframes roll{0%{transform:rotate(0)}
+            100%{transform:rotate(360deg)}
+        }
+        .main{width:100%;border:solid 1px #0094ff}
+        .textbg{width:100%;line-height:30px;background-color:#F2F2F2;font-size:17px;font-family:'Adobe Garamond Pro'}
+        .textbg p{text-indent:30px}
+    </style>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body style="background-color: #f5f5f5">
+
+<div id="main" class="main">
+    <p class="pull_drawing">
+        <i class="loading_icon"></i>
+        <span class="loading_text">下拉刷新中</span>
+    </p>
+    <div class="textbg">
+        <p>
+            携程是一个在线票务服务公司，创立于1999年，总部设在中国上海。携程旅行网拥有国内外六十万余家会员酒店可供预订，是中国领先的酒店预订服务中心。携程旅行网已在北京、广州、深圳、成都、杭州、厦门、青岛、沈阳、南京、武汉、南通、三亚等17个城市设立分公司，员工超过25000人。2003年12月，携程旅行网在美国纳斯达克成功上市。
+        </p>
+        <p>
+            携程旅行网成功整合了高科技产业与传统旅游行业，向超过9000万会员提供集酒店预订、机票预订、度假预订、商旅管理、特惠商户及旅游资讯在内的全方位旅行服务。携程旅行网除了在自身网站上提供丰富的旅游资讯外，还委托出版了旅游丛书《携程走中国》，并委托发行旅游月刊杂志《携程自由行》。
+        </p>
+        <p>
+            2015年10月26日携程网和去哪儿宣布合并，百度将通过此交易完成前拥有的178,702,519股去哪儿网A类普通股1和11,450,000股去哪儿B类普通股置换成11,488,381股携程增发的普通股。[1]  2016年4月21日，携程网和东航集团在上海签订战略合作框架协议，宣布双方及其下属各级控股投资公司将在业务、股权、资本市场等领域开展合作。
+        </p>
+        <h3>旅游度假产品</h3>
+        <p>
+            携程度假提供数百条度假产品线路，包括“三亚”、“云南”、“港澳”、“泰国”、“欧洲”“名山”、“都市”、“自驾游”等20余个度假专卖店，每个“专卖店”内拥有不同产品组合线路多条。客人可选择由北京、上海、广州、深圳、杭州、成都、沈阳、南京、青岛、厦门、武汉十一地出发。
+
+        </p>
+        <h3>酒店预订服务</h3>
+        <p>
+            携程旅行网拥有中国领先的酒店预订服务中心，为会员提供即时预订服务，合作酒店超过32000家，遍布全球138个国家和地区的5900余个城市，有2000余家酒店保留房。
+        <h3>
+            高铁代购服务
+        </h3>
+        <p>
+            携程于2011年7月5日推出高铁频道，为消费者提供高铁和动车的预订服务，“暂只提供上海市、江苏省、浙江省、安徽省配送服务。暂提供7天内的高铁及动车票的代购服务。”
+        </p>
+        <h3>携程信用卡,功能与服务</h3>
+        <p>
+            金穗携程旅行信用卡是中国农业银行股份有限公司（以下简称：中国农业银行）与携程旅行网合作发行的金穗系列品牌贷记卡，该卡集金穗贷记卡金融功能以及携程VIP会员卡功能于一体，秉承中国农业银行与携程旅行网的优质服务。
+        </p>
+        <h3>主要特点</h3>
+        <p>
+            1.金穗携程旅行信用卡，即是携程VIP会员卡，又是农行金穗贷记卡。在携程旅行网消费既可累积携程积分，同时还可以累积信用卡积分（其中“携程积分”为：电话或网上预订积分系数为1，无线预订积分系数为2 ）。
+        </p><p>
+    </p><p>
+        2.使用金穗携程旅行信用卡，即可享有“金融账户+银行积分+携程积分+旅行储备金”4个专享账户。
+    </p><p>
+        3.持金穗携程旅行信用卡，即可预订全球134个国家的28000余家2-5星级酒店。
+    </p><p>
+        4.持金穗携程旅行信用卡，即可实现国内、国际航线机票信息查询；异地出发，本地订票、取票。更可以享受携程独家推出的电子机票服务。
+    </p><p>
+        5.凭此卡即可享受携程VIP会员各种优惠礼遇，专享酒店折扣、机票折扣、度假折扣，其中包括千余条度假、旅游优惠线路以及全国3000余家特约商户专享餐饮娱乐高额消费折扣。
+    </p>
+        <h3>携程礼品卡</h3>
+        <p>
+            介绍
+        </p><p>
+        携程旅行网自2011年推出代号为“游票”的预付卡产品，并逐步深度优化产品的用户体验及支付范围，2013年，正式定名“携程礼品卡”。已有“任我行”、“任我游”两类产品供选择。
+        <h3>功能用途</h3>
+        <p>
+            携程礼品卡(任我行)可预订预付费类酒店、惠选酒店、机票、旅游度假产品、火车票产品、团购产品。(注：自由机+酒产品、门票类产品、代驾租车产品及银行专享类旅游度假产品等暂不支持礼品卡支付。)
+        </p><p>
+        携程礼品卡(任我游)可预订预付费类酒店、惠选酒店、旅游度假产品、团购产品。
+    </p><p>
+        携程宝是携程旅行网自2013年起独家推出的礼品卡优惠套餐产品。拥有“任我行”和“任我游”两个系列，每个系列分别包含 “90天”、“180天”及“月月返”三款产品。携程宝提倡有计划的科学出行理念。用户可根据自己的出行需求提前规划自己的预算，选购最适合的携程宝产品，获取最大的优惠。[7-8]
+        <h3>票价比价</h3>
+        <p>    携程网推出的机票、火车票同时预订功能在国内在线旅游行业中尚属首次出现。该功能来源于对用户行为习惯的深入观察，创新性地将机票和火车票放在同一页面进行价格上的对比，改变了传统火车票单一的订票页面模式，解决了因价格选择难的问题。
+
+        </p>
+    </div>
+</div>
+
+<script>
+
+    // 要下拉的对象、高度、Loading文本、Loading图标、css名称、回调函数
+    var slidePlug = function (target, height, loading_text, loading_icon, className, callback) {
+        var _hasPhone = navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i);
+        var _hasTouch = 'ontouchstart' in window; // 触摸事件
+        var _pulldownConfig = { normalStatus: "下拉即可刷新", maxStatus: "松开即可刷新", releaseStatus: "努力刷新中…" }; // 下拉的三种状态
+        var _start = 0,_end = 0; // 起始触摸位置、结束触摸位置
+        var $target = $(target),$loading_text = $(loading_text),$loading_icon = $(loading_icon);
+        var _TransitionObj = {
+            // 平移函数：-webkit-transform在浏览器上平移，水平方向0像素、垂直方向height像素
+            translate: function (height) {
+                $target.css({ "-webkit-transform": "translate(0," + height + "px)", "transform": "translate(0," + height + "px)" });
+            },
+            // 属性渐变函数：-webkit-transition：CSS属性(none|all|属性)  持续时间  时间函数  延迟时间
+            translitionTime: function (time) {
+                $target.css({ "-webkit-transition": "all " + time + "s", "transition": "all " + time + "s" }); // 所有属性渐变：xxx秒
+            },
+            goDefault: function () {
+                _TransitionObj.translitionTime(0.5); // 0.5秒属性变回
+                _TransitionObj.translate(0); // 不做平移
+            }
+        };
+        // 绑定的事件监听
+        var _bindTouchEvents = function () {
+            $target.bind("touchstart", _touchstartHandler);
+            $target.bind("touchmove", _touchmoveHandler);
+            $target.bind("touchend", _touchendHandler);
+        };
+
+        // 触摸开始
+        var _touchstartHandler = function (e) {
+            $loading_icon.removeClass(className);
+            var even = typeof event == "undefined" ? e : event;
+            //保存当前鼠标Y坐标
+            _start = _hasTouch ? even.touches[0].pageY : even.pageY; // 有触摸态，则允许使用touch数组，没有触摸态则直接使用当前的鼠标坐标
+
+            // 滚动条没有触顶，消除动画
+            if ($target.scrollTop() > 0) {
+                console.log($target.scrollTop());
+                //消除滑块动画时间
+                _TransitionObj.translitionTime(0);
+            }
+        };
+
+        // 触摸移动
+        var _touchmoveHandler = function (e) {
+            var even = typeof event == "undefined" ? e : event;
+            //保存当前鼠标Y坐标
+            _end = _hasTouch ? even.touches[0].pageY : even.pageY;
+
+            if (_end - _start > height) {
+                $loading_text.html(_pulldownConfig.maxStatus); // 默认拖动超过60像素就变成松开即可刷新
+            } else {
+                $loading_text.html(_pulldownConfig.normalStatus); // 没超过60像素则直接是下拉可以刷新
+            }
+            even.preventDefault(); // touchMove默认会触发什么事件？
+
+            //消除滑块动画时间
+            _TransitionObj.translitionTime(0);
+            _TransitionObj.translate(_end - _start); // 平移高度差的距离
+        };
+
+        // 触摸结束（如果超过距离并且刷新，则Loading动画效果是在这里做的）
+        var _touchendHandler = function (e) {
+            //判断滑动距离是否大于等于指定值
+            if (_end - _start >= height) {
+                $loading_icon.addClass(className); // 添加loading_icon样式（Loading）
+
+                //设置滑块回弹时间，所有属性1秒回弹
+                _TransitionObj.translitionTime(1);
+
+                //保留提示部分
+                _TransitionObj.translate(0);
+
+                //执行回调函数
+                if (typeof callback == "function") {
+                    callback.call(_TransitionObj, e);
+                }
+            } else {
+                //返回初始状态
+                _TransitionObj.goDefault();
+            }
+        }
+        var exports = {
+            _unbindTouchEvents : function () {
+                $target.unbind("touchstart", _touchstartHandler);
+                $target.unbind("touchmove", _touchmoveHandler);
+                $target.unbind("touchend", _touchendHandler);
+            }
+        }
+        _bindTouchEvents();
+        return exports;
+    }
+
+    var slideObj = new slidePlug(document.getElementById('main'),
+            60,
+            document.getElementsByClassName("loading_text"),
+            document.getElementsByClassName("loading_icon"),
+            "loading_icon"
+    );
+    // 可以调用slideObj的_unbindTouchEvents卸载这些监听
+    //slideObj._unbindTouchEvents();
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试json</title>
+    <link rel="stylesheet" type="text/css" href="css/utils/utils-common.css?v=1.0.11">
+    <link rel="stylesheet" type="text/css" href="css/artDialog/ui-dialog.css">
+    <link rel="stylesheet" type="text/css" href="css/module/route-style.css">
+</head>
+
+<body>
+
+<div class="fixed-layer">
+    <div class="result-title">路由计算详细日志</div>
+    <hr class="title-hr" />
+    <div class="result-info">
+        <div class="result-layer kv-result"><span class="result-strong">apiCode</span>:&nbsp;icbc901</div>
+        <div class="result-layer kv-result"><span class="result-strong">channelSystemId</span>:&nbsp;trans0001</div>
+        <div class="result-layer map-result">
+            <div class="map-title"><span class="result-strong">channelProps</span>:</div>
+            <ul>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0001abcsadfsasadfsadfsadfsadfasdfasdfsdfasdfdfsadfsadfdicbc0001abcsadfsasadfsadfsadfsadfasdfasdfsdfasdfdfsadfsadfd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0002abcd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0003abcd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0002abcd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0003abcd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0002abcd</li>
+                <li><span class="result-strong">keyList1</span>:&nbsp;icbc0003abcd</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<form>
+
+    <div class="section">
+        <span class="router-title">常规路由试算参数:</span>
+        <ul>
+            <li>
+                <div class="router-param">
+                    <span class="param-name">参数名称1：</span>
+                    <span class="param-value">
+                        <input type="text" name="" value="" placeholder="请输入参数值">
+                    </span>
+                </div>
+                <div class="router-param">
+                    <span class="param-name">参数名称2：</span>
+                    <span class="param-value">
+                        <input type="text" name="" value="" placeholder="请输入参数值">
+                    </span>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+            <li>
+                <div class="router-param">
+                    <span class="param-name">参数名称3：</span>
+                    <span class="param-value">
+                        <input type="text" name="" value="" placeholder="请输入参数值">
+                    </span>
+                </div>
+                <div class="router-param">
+                    <span class="param-name">参数名称4：</span>
+                    <span class="param-value">
+                        <input type="text" name="" value="" placeholder="请输入参数值">
+                    </span>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="param-division">
+
+    <div class="section">
+        <span class="router-title">附加路由试算参数:</span>
+        <textarea id="txt-area" class="txt-area" name="keyValue"
+                  placeholder='{ "key1" : "value1", "key2" : "value2" }'></textarea>
+    </div>
+    <div class="section">
+        <input type="button" name="confirmBtn" value="校验试算参数">
+        <input type="button" name="loadingBtn" value="提交">
+        <input type="button" name="kitBtn" value="试算小工具">
+        <input type="button" name="ajaxBtn" value="单个ajax请求">
+        <input type="button" name="multiAjax" value="批量ajax提交">
+        <input type="button" name="splitString" value="切割字符串">
+    </div>
+
+</form>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/utils/utils-common.js?v=1.0.2"></script>
+<script type="text/javascript" src="js/artDialog/dialog-min.js"></script>
+<script type="text/javascript" src="js/artTemplate/template.js"></script>
+<script type="text/javascript" src="js/zclip/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="js/module/route-calculate.js"></script><!-- 路由试算功能区 -->
+<script type="text/javascript" src="js/test/test-utils-common.js"></script>
+
+<script type="text/html" id="generate-tmpl">
+    <div class="generate-json">
+        <div class="kit-header">
+            <span class="header-tip">请按照提示输入参数并复制：</span>
+            <span class="add-kvblock"><input type="button" class="kv-addBtn" value="+"></span>
+            <div class="clearfix h10"></div>
+        </div>
+        <div class="kit-body">
+            <!--试算参数区-->
+        </div>
+        <div class="kit-footer">
+            <div><textarea id="jsonTxt" class="kv-txt" name="generate-value" placeholder='请点击生成按钮，转成json后复制'></textarea>
+            </div>
+            <div>
+                <input name="generate" type="button" value="生成试算参数">
+                <input name="copyBtn" type="button" value="复制到剪贴板">
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="kv-tmpl">
+    <div class="one-kv">
+        <div class="kv-block">
+            <span>输入key字段</span>
+            <input name="route-key" required placeholder="路由试算参数key">
+        </div>
+        <div class="kv-block">
+            <span>对应value值</span>
+            <input name="route-value" required placeholder="参数key对应value">
+        </div>
+        <div class="kv-block">
+            <input type="button" class="del-kvblock" value="删除">
+        </div>
+    </div>
+</script>
+</body>
+</html>
